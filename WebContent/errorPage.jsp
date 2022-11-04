@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" isErrorPage="true"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>점검중</title>
+<style>
+	
+</style>
+</head>
+<body>
+	<h1 style=" text-align:center; ">죄송합니다. 점검중입니다.</h1>
+	<img class="im" src="<%=request.getContextPath() %>//img/zum.jpg" alt="점검중" />
+</body>
+</html>
