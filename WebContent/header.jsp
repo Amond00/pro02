@@ -28,11 +28,20 @@
           	제품
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="<%=request.getContextPath() %>/product/productList.jsp">냉동감자</a>
-          <a class="dropdown-item" href="<%=request.getContextPath() %>/product/productList.jsp">또띠아</a>
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="true" style="color:black;"> 
+          	냉동감자
+        </a>
+          <a class="dropdown-item" href="GetProductItemListCtrl?cateNo=1">CONVENTIONAL</a>
+          <a class="dropdown-item" href="GetProductItemListCtrl?cateNo=2">CLEAR COATING</a>
+          <a class="dropdown-item" href="GetProductItemListCtrl?cateNo=3">Seasoned＆Battered</a>
+          <a class="dropdown-item" href="GetProductItemListCtrl?cateNo=4">Delivery+</a>
+          <a class="dropdown-item" href="GetProductItemListCtrl?cateNo=5">Specialty</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="<%=request.getContextPath() %>/product/productList.jsp">야채</a>
-          <a class="dropdown-item" href="<%=request.getContextPath() %>/product/productList.jsp">아보카도</a>
+          <a class="dropdown-item" href="GetProductItemListCtrl?cateNo=6">아보카도</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="GetProductItemListCtrl?cateNo=7">야채</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="GetProductItemListCtrl?cateNo=8">또띠아</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -67,6 +76,9 @@
 	  </li>
 	  <li class="nav-item">
 	    <a class="nav-link" href="<%=request.getContextPath() %>/GetCustomInfoCtrl">회원정보</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="<%=request.getContextPath() %>/GetMemberSalesInfoCtrl">구매내역</a>
 	  </li>
 	  <% if(sid.equals("admin")) { %>
 		  <li class="nav-item">

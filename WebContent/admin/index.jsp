@@ -16,6 +16,9 @@
 .title { padding-top:36px; padding-bottom:20px; }
 #content_row { min-height:calc(100vh - 84px); }
 </style>
+
+<%@ include file="../head.jsp" %>
+
 </head>
 <body>
 <%@ include file="../header.jsp" %>

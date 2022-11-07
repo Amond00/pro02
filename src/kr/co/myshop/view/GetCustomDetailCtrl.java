@@ -38,8 +38,6 @@ public class GetCustomDetailCtrl extends HttpServlet {
 			pstmt.setString(1, cusId);
 			rs = pstmt.executeQuery();
 			String cusPw = "";
-			String key = "%02x";
-			String compPw = "";
 			Custom vo = new Custom();
 			
 			if(rs.next()){

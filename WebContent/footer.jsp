@@ -9,9 +9,12 @@
                     <a href="" class="dpc">이용약관</a>
                     <a href="" class="dpc">이메일무단수집거부</a>
                 </nav>
-                <p class="addr">Simplot | e-VOS/협력사 | 등록 | 개인정보처리방침 | 문의/제안 | SITEMAP <br>
-                    대표전화 02-3773-1114</p>
-                <p class="copyright">COPYRIGHT ⓒ LG DISPLAY CO., LTD. ALL RIGHTS RESERVED.</p>
+                <p class="addr">
+       				Simplot South Korea<br>
+					Tel. 02-561-4787<br>
+					E-mail. ski_info@simplot.com
+				</p>
+                <p class="copyright">© 2022 Simplot South Korea.All Right Resrved.</p>
             </div>
             <div class="sel_box">
                 <select name="sel" id="sel" class="sel" onchange="sel_link(this)">

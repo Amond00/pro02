@@ -7,9 +7,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>공지사항 목록</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
@@ -46,12 +43,18 @@
 				<th>작성일시</th>
 				<td><%=vo.getResDate() %></td>
 			</tr>
+			<tr>
+				<th>조회수</th>
+				<td><%=vo.getVisited() %></td>
+			</tr>
 		</tbody>
 	</table>
 	<div class="btn-group">
 		<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-primary" style="margin-right:10px; border-radius:4em;">목록으로 돌아가기</a>
+		<%if(sid.equals("admin")) {%>
 		<a href="<%=request.getContextPath() %>/UpdateBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-primary" style="margin-right:10px; border-radius:4em;" >공지수정</a>
 		<a href="<%=request.getContextPath() %>/DeleteBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-danger" style="border-radius:4em;">공지삭제</a>
+		<% } %>
 	</div>
 </div>
 <%@ include file="../footer.jsp" %>
