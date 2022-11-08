@@ -6,19 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>로그인</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-
+<title>관리자 페이지</title>
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
 #content_row { min-height:calc(100vh - 84px); }
 </style>
-
-<%@ include file="../head.jsp" %>
-
 </head>
+<%@ include file="../head.jsp" %>
 <body>
 <%
 	List<Custom> cusList = (ArrayList<Custom>) request.getAttribute("cusList");

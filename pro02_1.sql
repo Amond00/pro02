@@ -1,4 +1,3 @@
-create database myshop;
 commit;
 use myshop;
 
