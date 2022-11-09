@@ -19,7 +19,7 @@
     <!-- Section: Social media -->
 
     <!-- Section: Form -->
-	<img src="<%=request.getContextPath() %>/img/ftlogo.png" alt="로고" style=" float:left; margin-top:-40px; margin-left:-250px;">
+	<img src="<%=request.getContextPath() %>/img/ftlogo.png" alt="로고" style=" float:left; margin-top:-75px; margin-left:-250px;">
     <!-- Section: Text -->
     <section class="mb-4">
       <p>
@@ -40,13 +40,13 @@
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-white">브랜드</a>
+              <a href="<%=request.getContextPath() %>/subpage/sub1.jsp" class="text-white">브랜드</a>
             </li>
             <li>
-              <a href="#!" class="text-white">히스토리</a>
+              <a href="<%=request.getContextPath() %>/subpage/sub2.jsp" class="text-white">히스토리</a>
             </li>
             <li>
-              <a href="#!" class="text-white">찾아오시는 길</a>
+              <a href="<%=request.getContextPath() %>/subpage/sub3.jsp" class="text-white">찾아오시는 길</a>
             </li>
           </ul>
         </div>
@@ -58,16 +58,16 @@
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-white">냉동감자</a>
+              <a href="<%=request.getContextPath() %>/GetProductItemListCtrl?cateNo=1" class="text-white">냉동감자</a>
             </li>
             <li>
-              <a href="#!" class="text-white">아보카도</a>
+              <a href="<%=request.getContextPath() %>/GetProductItemListCtrl?cateNo=6" class="text-white">아보카도</a>
             </li>
             <li>
-              <a href="#!" class="text-white">야채</a>
+              <a href="<%=request.getContextPath() %>/GetProductItemListCtrl?cateNo=7" class="text-white">야채</a>
             </li>
             <li>
-              <a href="#!" class="text-white">또띠아</a>
+              <a href="<%=request.getContextPath() %>/GetProductItemListCtrl?cateNo=8" class="text-white">또띠아</a>
             </li>
           </ul>
         </div>
@@ -79,13 +79,13 @@
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-white">캐쥬얼 다이닝</a>
+              <a href="<%=request.getContextPath() %>/subpage/sub4.jsp" class="text-white">캐쥬얼 다이닝</a>
             </li>
             <li>
-              <a href="#!" class="text-white">파인 다이닝</a>
+              <a href="<%=request.getContextPath() %>/subpage/sub5.jsp" class="text-white">파인 다이닝</a>
             </li>
             <li>
-              <a href="#!" class="text-white">헬씨 다이닝</a>
+              <a href="<%=request.getContextPath() %>/subpage/sub6.jsp" class="text-white">헬씨 다이닝</a>
             </li>
           </ul>
         </div>
@@ -96,14 +96,17 @@
           <h5 class="text-uppercase">고객센터</h5>
 
           <ul class="list-unstyled mb-0">
+          	<li>
+              <a href="#!" class="text-white">게시판</a>
+            </li>
             <li>
-              <a href="#!" class="text-white">공지사항</a>
+              <a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="text-white">공지사항</a>
             </li>
             <li>
               <a href="#!" class="text-white">Q&A</a>
             </li>
             <li>
-              <a href="#!" class="text-white">뉴스&이벤트</a>
+              <a href="#!" class="text-white">NEW&HOT&BEST</a>
             </li>
           </ul>
         </div>

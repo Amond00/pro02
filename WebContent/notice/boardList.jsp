@@ -17,7 +17,7 @@
 <%@ include file="../header.jsp" %>
 <%
 	List<Notice> notiList = (ArrayList<Notice>) request.getAttribute("notiList");
-%>'
+%>
 <div class="content container" id="content">
 	<h2 class="title">공지사항</h2>
 	<table class="table">

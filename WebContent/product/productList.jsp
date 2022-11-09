@@ -28,12 +28,13 @@ ul{
 	List<Product> proList = (ArrayList<Product>) request.getAttribute("proList");
 %>
 <div class="content in_container" id="content">
-	<h2 class="title">제품 목록</h2>
+	<h2 class="title" style="text-align:center;">제품 목록</h2>
+	<img src="<%=request.getContextPath() %>/img/product/product1.jpg" style="margin-bottom:40px; margin-left:100px;" alt="">
 	<ul class="row" id="best">
 	<% for(int i=0;i<proList.size();i++) {
 		Product pro = proList.get(i);
 	%>	
-		<li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+		<li class="col-xl-3 col-lg-4 col-md-6 col-sm-12" style="margin-bottom:30px;">
 			<div class="card" style="width: 18rem;">
 			  <img src="<%=request.getContextPath() %>/upload/<%=pro.getProPic() %>" class="card-img-top" alt="<%=pro.getProName() %>">
 			  <div class="card-body">
@@ -56,7 +57,7 @@ ul{
 	<div class="btn-group">
 	<% if (sid==null){ %>
 	<% } else if(sid.equals("admin")) { %>
-		<a href="<%=request.getContextPath() %>/InsertProductCategoryCtrl" class="btn btn-info" style=" border-radius:4em; margin-right:4px;">상품 등록</a>
+		<a href="<%=request.getContextPath() %>/InsertProductCategoryCtrl" class="btn btn-info" style=" border-radius:4em; margin-right:4px; ">상품 등록</a>
 	<% } %>
 	</div>
 </div>

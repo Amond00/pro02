@@ -17,6 +17,11 @@
 <%@ include file="../header.jsp" %>
 <%
 	Product vo = (Product) request.getAttribute("pro");
+	if(sid!=null) {
+		sid = sid;
+	} else {
+		sid = "guest";
+	}
 %>
 <div class="content container" id="content">
 	<h2 class="title">제품 상세보기</h2>
@@ -62,13 +67,15 @@
 		</tbody>
 	</table>
 	<div class="btn-group">
-		<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-primary" style=" border-radius:4em; margin-right:4px;">목록으로</a>
-		<% if(sid==null) { %>
-		<a href="<%=request.getContextPath() %>/GetSalesProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-primary" style=" border-radius:4em; margin-right:4px;">제품 구매</a>
-		<% } else if(sid.equals("admin")) {%>
-		<a href="<%=request.getContextPath() %>/UpdateProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-info" style=" border-radius:4em; margin-right:4px;">제품 정보 수정</a>
-		<a href="<%=request.getContextPath() %>/GetProductWearingCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-info" style=" border-radius:4em; margin-right:4px;">제품 입고</a>
-		<a href="<%=request.getContextPath() %>/DeleteProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-danger" style=" border-radius:4em; margin-right:4px;">제품 삭제</a>
+		<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-primary" style="margin-right:10px; border-radius:4em;">목록으로</a>
+		<% if(sid.equals("admin")) { %>
+		<a href="<%=request.getContextPath() %>/DeleteProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-danger" style="margin-right:10px; border-radius:4em;">제품 삭제</a>
+		<a href="<%=request.getContextPath() %>/UpdateProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-info" style="margin-right:10px; border-radius:4em;">제품 정보 수정</a>
+		<a href="<%=request.getContextPath() %>/GetProductWearingCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-info" style="margin-right:10px; border-radius:4em;">제품 입고</a>
+		<% } %>
+		<% if(sid!="guest") { %>
+		<a href="<%=request.getContextPath() %>/GetSalesProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-primary" style="margin-right:10px; border-radius:4em;">제품 구매</a>
+		<a href="<%=request.getContextPath() %>/InsertCartCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-primary" style="margin-right:10px; border-radius:4em;">장바구니 넣기</a>
 		<% } %>
 	</div>
 </div>

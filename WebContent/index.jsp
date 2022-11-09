@@ -8,6 +8,12 @@
 <%@ include file="head.jsp" %>
 </head>
 <body>
+<%-- <%
+	GetIndexProductListCtrl indexPro = new GetIndexProductListCtrl();
+	ArrayList<Product> bestPro = indexPro.bestProduct();
+	ArrayList<Product> hotPro = indexPro.bestProduct();
+	ArrayList<Product> newPro = indexPro.bestProduct();
+%> --%>
 <%@ include file="header.jsp" %>
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 	  <div class="carousel-indicators">
@@ -35,12 +41,14 @@
 	    <span class="visually-hidden">Next</span>
 	  </button>
 	</div>
+	
+	
 	<div class="container" id="content" >
 	
 		<div class="row featurette" style="margin-top:100px;" >
 	      <div class="col-md-7" style="float:right;">
 	        <h2 class="featurette-heading fw-normal lh-1" >Solutions & Resources</h2>
-	        <p class="lead" style="float:right;">업계 최초로 개발된 배달전용<br>프라이 특수코팅 사용으로 신기술 구현<br>겉은 바삭하고 속은 촉촉하게!</p>
+	        <p class="lead">업계 최초로 개발된 배달전용<br>프라이 특수코팅 사용으로 신기술 구현<br>겉은 바삭하고 속은 촉촉하게!</p>
 	      </div>
 	      <div class="col-md-5">
 	        <img src="./img/main4.jpg" class="d-block w-100" alt="...">
@@ -57,7 +65,9 @@
 	      </div>
 	    </div>
 	    
-	    <h1 style="text-align:center;">Our Products</h1>
+	    <h1 style="text-align:center; margin:100px;">Our Products</h1>
+	    
+	    
 	    
 		<div class="album py-5 bg-light">
 		    <div class="container">
@@ -160,7 +170,7 @@
 	  		<div class="container marketing">	  		
 
 		    <!-- Three columns of text below the carousel -->
-		    <h1 style="text-align:center;">Recommend</h1>
+		    <h1 style="text-align:center; margin:100px;">Recommend</h1>
 		    
 		    
 		    <div class="row">
@@ -177,13 +187,13 @@
 		      
 		    </div><!-- /.row -->
 			
-			<h1 style="text-align:center;">Simplot Video</h1>
+			<h1 style="text-align:center; margin:100px; ">Simplot Video</h1>
 			
 <!-- 			<iframe width="1280" height="600" src="https://www.youtube.com/embed/926q8cMLaKk" title="J.R. Simplot Company: Cultivating a World of Possibilities" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  -->			
 			
 		    <!-- START THE FEATURETTES -->
-		    <h1 style="text-align:center;">News & Event</h1>
+		    <h1 style="text-align:center; margin:100px;">News & Event</h1>
 		
 		    <hr class="featurette-divider">
 		

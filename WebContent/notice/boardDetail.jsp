@@ -18,6 +18,11 @@
 <%@ include file="../header.jsp" %>
 <%
 	Notice vo = (Notice) request.getAttribute("notice");
+	if(sid!=null) {
+		sid = sid;
+	} else {
+		sid = "guest";
+	}
 %>
 <div class="content container" id="content">
 	<h2 class="title">공지사항 상세</h2>
@@ -54,6 +59,8 @@
 		<%if(sid.equals("admin")) {%>
 		<a href="<%=request.getContextPath() %>/UpdateBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-primary" style="margin-right:10px; border-radius:4em;" >공지수정</a>
 		<a href="<%=request.getContextPath() %>/DeleteBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-danger" style="border-radius:4em;">공지삭제</a>
+		<% } else if(sid!="guest") {%>
+		
 		<% } %>
 	</div>
 </div>

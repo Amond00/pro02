@@ -87,8 +87,7 @@
 			</tbody>
 		</table>
 		<div class="btn-group">
-			<input type="submit" name="submit-btn" class="btn btn-info" value="정보수정">
-			<input type="reset" name="reset-btn" class="btn btn-info" value="취소">
+			<input type="submit" name="submit-btn" class="btn btn-info" value="정보수정" style="margin-right:10px; border-radius:4em;">
 		</div>
 	</form>	
 	<script>

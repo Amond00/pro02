@@ -74,15 +74,25 @@ create table product(
 	proPic varchar(200),
 	proPic2 varchar(200)
 );
-
+alter table product add scnt int default 0;
+alter table product drop cnt;
+ -- 1
 insert into product(proNo, cateNo, proName, proSpec, oriPrice, discountRate, proPic, proPic2) values(1,1,"왕감자","감자감자왕감자",3000,0.1,"product2.jpg","product2.jpg");
-insert into product values(2,1,"스테익프라이감자","클래식(Classic)",30000,0,"product3.jpg","product3.jpg");
-insert into product values(3,1,"블루리본 슈스트링(막대감자)","블루리본 (Blue Ribbon)",25000,0.3,"product4.jpg","product4.jpg");
-insert into product values(4,1,"포테이토 칩","스킨크레더블(Skincredibles)",10000,0.2,"product5.jpg","product5.jpg");
-insert into product values(5,1,"크링클컷 10 cut 웨지","셀렉트레서피(Select Recipe)",15000,0,"product6.jpg","product6.jpg");
-insert into product values(6,1,"스킨온 10컷 랜치 웨지 (반달감자)","트레디셔널(Traditional)",15000,0,"product7.jpg","product7.jpg");
-
-insert into product values(7,2,"젠가 크리스피","Jenga",20000,0,"product8.jpg","product8.jpg");
+ -- 2
+insert into product values(12,2,"콘퀘스트 스트레이트컷 스킨온","Conquest",21200,0.24,"product13.jpg","product13.jpg");
+ -- 3
+insert into product values(15,3,"고메 케이준 프라이","Gourmet",26230,0.22,"product16.jpg","product16.jpg");
+ -- 4
+ insert into product values(21,4,"딜리버리플러스 슈스트링","Seasoned Crisp Delivery+",51400,0.5,"product22.jpg","product22.jpg");
+ -- 5
+ insert into product values(27,5,"101 해쉬브라운","Traditional",9200,0.34,"product28.jpg","product28.jpg");
+ -- 6
+  insert into product values(30,6,"웨스턴 구아까몰","Harvest Fresh",1200,0.24,"product31.jpg","product31.jpg");
+ -- 7
+  insert into product values(34,7,"홀그린 빈(그린콩)","Green Valley",5100,0.14,"product35.jpg","product35.jpg");
+  update product set proSpec="Green Valley" where proNo=33;
+ -- 8
+   insert into product values(38,8,"밀 또띠아 홈스타일 6 인치","Fresca",1200,0.24,"product37.jpg","product37.jpg");
 
 select * from product;
 commit;
@@ -94,7 +104,6 @@ create table wearing(
 );
 
 desc wearing;
-
 select * from wearing;
 
 -- 판매 테이블 생성
@@ -136,3 +145,51 @@ create table parsel(
 desc parsel;
 select * from parsel;
 drop table parsel;
+
+
+create table cart(
+	cartNo int primary key auto_increment,
+    proNo int,
+    cusId varchar(13)
+);
+
+select * from cart;
+commit;
+
+create table qnaa(
+    no int primary key auto_increment,
+    title varchar(100) not null,
+    content varchar(1000) not null,
+    author varchar(20) not null,
+    resdate datetime default now(),
+    lev int default 0,            -- 깊이
+    parno int not null,          -- 부모글 번호
+    sec char(1)                     -- 비밀글 여부
+);
+
+insert into qnaa(title, content, author, lev, parno, sec)  values ("문의 합니다. 테스트 글1", "문의 합니다. 테스트 글1의 내용입니다.", "hth072", 0, 1, "N");
+alter table qnaa add column visited int default 0; 
+alter table qnaa modify column parno int default;
+select * from qnaa;
+drop table qnaa;
+select no from qnaa order by no desc limit 1;
+select no from qnaa order by resdate desc limit 1;
+update qnaa set parno=2 where no=2;
+commit;
+select no from qnaa order by resdate desc limit 1;
+delete from qnaa where no >= 6;
+
+create table board(
+    no int primary key auto_increment,
+    title varchar(100) not null,
+    content varchar(1000) not null,
+    author varchar(20) not null,
+    resdate datetime default now(),
+    lev int default 0,            -- 깊이
+    parno int not null	       -- 부모글 번호
+);
+
+alter table board add visited int default 0;
+
+select * from board;
+commit;
